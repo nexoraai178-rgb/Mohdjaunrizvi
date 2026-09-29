@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohd Jaun Rizvi | Web Developer</title>
+
+<meta name="description"
+content="Mohd Jaun Rizvi - Web Developer creating modern, responsive and affordable websites.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+:root{
+  --bg:#050807;
+  --card:#0b1110;
+  --green:#00ff9d;
+  --text:#f5f5f5;
+  --muted:#9ca9a5;
+  --border:rgba(0,255,157,.18);
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(0,255,157,.10),transparent 25%),
+    radial-gradient(circle at 10% 80%,rgba(0,255,157,.06),transparent 25%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:999;
+  background:rgba(5,8,7,.88);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+nav{
+  min-height:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-code{
+  color:var(--green);
+  font-size:25px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#d5ddda;
+  font-size:14px;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--green);
+}
+
+.nav-btn{
+  border:1px solid var(--green);
+  color:var(--green);
+  padding:10px 17px;
+  border-radius:30px;
+  font-size:13px;
+  transition:.3s;
+}
+
+.nav-btn:hover{
+  background:var(--green);
+  color:#00130b;
+}
+
+.menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:var(--green);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:100px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:50px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  color:var(--green);
+  border:1px solid var(--border);
+  background:rgba(0,255,157,.05);
+  padding:7px 13px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.02;
+  margin-bottom:15px;
+  letter-spacing:-3px;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero h2{
+  font-size:clamp(20px,3vw,31px);
+  color:#dce5e1;
+  margin-bottom:18px;
+}
+
+.hero h2 span{
+  color:var(--green);
+}
+
+.hero-text{
+  max-width:600px;
+  color:var(--muted);
+  font-size:16px;
+  margin-bottom:28px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 21px;
+  border-radius:9px;
+  border:1px solid var(--green);
+  font-weight:700;
+  font-size:14px;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:var(--green);
+  color:#00130b;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 35px rgba(0,255,157,.2);
+}
+
+.btn-outline{
+  color:var(--green);
+}
+
+.btn-outline:hover{
+  background:rgba(0,255,157,.08);
+  transform:translateY(-3px);
+}
+
+.socials{
+  display:flex;
+  gap:20px;
+  margin-top:28px;
+  color:#bdc8c4;
+  font-size:14px;
+}
+
+.socials a:hover{
+  color:var(--green);
+}
+
+/* CODE CARD */
+
+.code-card{
+  background:linear-gradient(145deg,#0c1512,#060a09);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+  transform:rotate(1deg);
+}
+
+.dots{
+  display:flex;
+  gap:7px;
+  margin-bottom:25px;
+}
+
+.dots i{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#31403b;
+}
+
+.code{
+  color:#c5d2cd;
+  font-family:monospace;
+  font-size:14px;
+  line-height:2;
+}
+
+.code .green{
+  color:var(--green);
+}
+
+.code .yellow{
+  color:#e5dc87;
+}
+
+.code .blue{
+  color:#77c7ff;
+}
+
+/* GENERAL */
+
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  margin-bottom:45px;
+}
+
+.small-title{
+  color:var(--green);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:8px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.section-title h2{
+  font-size:clamp(30px,5vw,45px);
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:var(--muted);
+  max-width:650px;
+}
+
+/* PROFILE */
+
+.profile-section{
+  background:rgba(0,255,157,.025);
+}
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.profile-photo-box{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.profile-photo{
+  width:330px;
+  height:400px;
+  object-fit:cover;
+  border-radius:25px;
+  border:2px solid var(--green);
+  padding:6px;
+  background:#07100e;
+  box-shadow:
+    0 0 35px rgba(0,255,157,.15),
+    0 25px 70px rgba(0,0,0,.5);
+}
+
+.profile-photo-box::before{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:400px;
+  border:1px solid rgba(0,255,157,.25);
+  border-radius:25px;
+  transform:rotate(5deg);
+  z-index:-1;
+}
+
+.profile-info h2{
+  font-size:clamp(30px,5vw,48px);
+  margin-bottom:15px;
+}
+
+.profile-info h2 span{
+  color:var(--green);
+}
+
+.profile-info p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.profile-points{
+  display:grid;
+  gap:12px;
+  margin:25px 0;
+}
+
+.profile-point{
+  padding:13px 15px;
+  background:#0b1210;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:10px;
+}
+
+.profile-point span{
+  color:var(--green);
+  margin-right:8px;
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card{
+  background:linear-gradient(145deg,rgba(16,24,23,.95),rgba(7,12,11,.95));
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:15px;
+  padding:25px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  border-color:var(--border);
+  box-shadow:0 15px 45px rgba(0,0,0,.3);
+}
+
+.icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:rgba(0,255,157,.08);
+  color:var(--green);
+  font-size:23px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.price{
+  color:var(--green);
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* PROJECTS */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project{
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  transition:.3s;
+}
+
+.project:hover{
+  transform:translateY(-7px);
+  border-color:var(--border);
+}
+
+.project-img{
+  height:190px;
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(135deg,rgba(0,255,157,.13),rgba(0,0,0,.7)),
+    #0d1714;
+  position:relative;
+}
+
+.project-icon{
+  font-size:55px;
+}
+
+.project-content{
+  padding:23px;
+}
+
+.project-content h3{
+  margin-bottom:8px;
+}
+
+.project-content p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.project-link{
+  color:var(--green);
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* ABOUT + SKILLS */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:start;
+}
+
+.about-text{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.facts{
+  display:grid;
+  gap:12px;
+}
+
+.fact{
+  padding:14px;
+  border-left:2px solid var(--green);
+  background:rgba(0,255,157,.03);
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill{
+  border:1px solid rgba(255,255,255,.09);
+  background:#0c1312;
+  padding:10px 14px;
+  border-radius:30px;
+  font-size:13px;
+}
+
+/* PRICING */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.price-card{
+  padding:30px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  background:var(--card);
+  position:relative;
+}
+
+.price-card.featured{
+  border-color:var(--green);
+  box-shadow:0 15px 60px rgba(0,255,157,.08);
+}
+
+.popular{
+  position:absolute;
+  top:15px;
+  right:15px;
+  color:#00130b;
+  background:var(--green);
+  padding:5px 9px;
+  font-size:10px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+.price-card h3{
+  margin-bottom:10px;
+}
+
+.amount{
+  color:var(--green);
+  font-size:30px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.price-card ul{
+  list-style:none;
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+.price-card li{
+  margin:10px 0;
+}
+
+.price-card li::before{
+  content:"✓";
+  color:var(--green);
+  margin-right:8px;
+}
+
+/* CONTACT */
+
+.contact-box{
+  text-align:center;
+  padding:60px 25px;
+  border:1px solid var(--border);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at center,rgba(0,255,157,.08),transparent 50%),
+    var(--card);
+}
+
+.contact-box h2{
+  font-size:clamp(30px,5vw,50px);
+  margin-bottom:12px;
+}
+
+.contact-box p{
+  color:var(--muted);
+  max-width:600px;
+  margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:25px 0;
+  color:#899590;
+  font-size:13px;
+}
+
+.footer-flex{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-name{
+  color:var(--green);
+  font-weight:bold;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:55px;
+  height:55px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#20d66b;
+  color:#001c0d;
+  font-size:24px;
+  z-index:1000;
+  box-shadow:0 8px 30px rgba(32,214,107,.3);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links,
+  .nav-btn{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links.active{
+    display:flex;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    background:#07100e;
+    padding:25px;
+    gap:20px;
+    border-bottom:1px solid var(--border);
+  }
+
+  .hero-grid,
+  .profile-grid,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .profile-grid{
+    gap:45px;
+  }
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  .pricing{
+    grid-template-columns:1fr;
+  }
+
+  .code-card{
+    transform:none;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:130px;
+    padding-bottom:60px;
+  }
+
+  .hero h1{
+    font-size:45px;
+    letter-spacing:-2px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .socials{
+    flex-wrap:wrap;
+  }
+
+  .code{
+    font-size:12px;
+  }
+
+  .profile-photo{
+    width:280px;
+    height:340px;
+  }
+
+  .profile-photo-box::before{
+    width:280px;
+    height:340px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+<div class="container">
+
+<nav>
+
+<a href="#home" class="logo">
+<span class="logo-code">&lt;/&gt;</span>
+Mohd Jaun Rizvi
+</a>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#profile">About Me</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="nav-btn">
+Get a Website
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</nav>
+
+</div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">
+💻 Available for Website Projects
+</span>
+
+<h1>
+Mohd Jaun<br>
+<span>Rizvi</span>
+</h1>
+
+<h2>
+<span>Web Developer</span> | Building Modern Websites
+</h2>
+
+<p class="hero-text">
+I create modern, responsive and affordable websites
+for small businesses, creators and individuals.
+Let's bring your idea to the web.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+🚀 Start a Project
+</a>
+
+<a href="#projects" class="btn btn-outline">
+View My Work →
+</a>
+
+</div>
+
+<div class="socials">
+
+<a
+href="https://www.instagram.com/jaunrizviii/"
+target="_blank">
+📸 Instagram @jaunrizviii
+</a>
+
+<a
+href="https://x.com/JaunRi5"
+target="_blank">
+𝕏 X @JaunRi5
+</a>
+
+</div>
+
+</div>
+
+
+<div class="code-card">
+
+<div class="dots">
+<i></i>
+<i></i>
+<i></i>
+</div>
+
+<div class="code">
+
+<div>
+<span class="blue">const</span>
+developer =
+<span class="yellow">"Jaun Rizvi"</span>;
+</div>
+
+<div>
+<span class="blue">const</span>
+projects = [
+</div>
+
+<div>
+&nbsp;&nbsp;<span class="green">"ShiaSphere"</span>,
+</div>
+
+<div>
+&nbsp;&nbsp;<span class="green">"Jauvexa AI"</span>,
+</div>
+
+<div>
+&nbsp;&nbsp;<span class="green">"Lucknow GTA"</span>
+</div>
+
+<div>];</div>
+
+<br>
+
+<div>
+<span class="blue">function</span>
+<span class="green">buildWebsite</span>() {
+</div>
+
+<div>
+&nbsp;&nbsp;<span class="blue">return</span>
+<span class="yellow">"Your Idea → Website"</span>;
+</div>
+
+<div>}</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PHOTO / PROFILE ================= -->
+
+<section class="profile-section" id="profile">
+
+<div class="container profile-grid">
+
+<div class="profile-photo-box">
+
+<!--
+APNI PHOTO KO "profile.jpg" NAAM SE
+index.html KE SAME FOLDER MEIN RAKHO.
+-->
+
+<img
+src="profile.jpg"
+alt="Mohd Jaun Rizvi"
+class="profile-photo">
+
+</div>
+
+
+<div class="profile-info">
+
+<div class="small-title">
+About Me
+</div>
+
+<h2>
+Hi, I'm <span>Mohd Jaun Rizvi</span>
+</h2>
+
+<p>
+I'm a Class 11 student and web developer who enjoys
+building modern websites and learning new technologies.
+</p>
+
+<p>
+I work on my own digital projects and continuously
+improve my skills in web and app development.
+</p>
+
+<div class="profile-points">
+
+<div class="profile-point">
+<span>💻</span>
+Web Developer
+</div>
+
+<div class="profile-point">
+<span>🎓</span>
+Class 11 Student
+</div>
+
+<div class="profile-point">
+<span>📱</span>
+App Development — Learning
+</div>
+
+<div class="profile-point">
+<span>🎮</span>
+Game Development — Learning
+</div>
+
+</div>
+
+<a href="#contact" class="btn btn-primary">
+Let's Work Together →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+What I Do
+</div>
+
+<h2>My Services</h2>
+
+<p>
+Affordable web solutions for individuals,
+creators and small businesses.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>Website Development</h3>
+
+<p>
+Modern, responsive websites designed
+according to your requirements.
+</p>
+
+<div class="price">
+Starting at ₹500
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h3>Landing Page</h3>
+
+<p>
+Clean and attractive landing pages
+for products, brands and businesses.
+</p>
+
+<div class="price">
+Starting at ₹500
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎨</div>
+
+<h3>Website Redesign</h3>
+
+<p>
+Give your existing website a modern
+and responsive design.
+</p>
+
+<div class="price">
+Starting at ₹1,000
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">&lt;/&gt;</div>
+
+<h3>Custom Website</h3>
+
+<p>
+Have a unique idea? Let's discuss
+a custom website for your project.
+</p>
+
+<div class="price">
+Price on Request
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REAL PROJECTS ================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+My Work
+</div>
+
+<h2>My Projects</h2>
+
+<p>
+Here are my real projects. No demo or fake projects.
+</p>
+
+</div>
+
+
+<div class="projects">
+
+
+<!-- SHIASPHERE -->
+
+<div class="project">
+
+<div class="project-img">
+<div class="project-icon">🕌</div>
+</div>
+
+<div class="project-content">
+
+<h3>ShiaSphere</h3>
+
+<p>
+A Shia-focused digital project featuring
+Duas, Ziyarat and Islamic content.
+</p>
+
+<!-- ShiaSphere actual link -->
+
+<a
+href="https://nexoraai178-rgb.github.io/ShiaSphere-/"
+target="_blank"
+class="project-link">
+
+Visit ShiaSphere →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- JAUVEXA AI -->
+
+<div class="project">
+
+<div class="project-img">
+<div class="project-icon">🤖</div>
+</div>
+
+<div class="project-content">
+
+<h3>Jauvexa AI</h3>
+
+<p>
+My AI assistant project focused on creating
+an advanced AI-powered experience.
+</p>
+
+<!--
+Jauvexa AI ka actual live URL yahan add karo.
+Example:
+href="https://your-jauvexa-url.com"
+-->
+
+<a
+href="#contact"
+class="project-link">
+
+Jauvexa AI →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- LUCKNOW GTA -->
+
+<div class="project">
+
+<div class="project-img">
+<div class="project-icon">🎮</div>
+</div>
+
+<div class="project-content">
+
+<h3>Lucknow GTA</h3>
+
+<p>
+A game/web project created and developed
+as part of my own digital projects.
+</p>
+
+<!--
+Lucknow GTA ka actual live URL yahan add karo.
+-->
+
+<a
+href="#contact"
+class="project-link">
+
+Lucknow GTA →
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT + SKILLS ================= -->
+
+<section id="skills">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="section-title">
+
+<div class="small-title">
+My Journey
+</div>
+
+<h2>About Me</h2>
+
+</div>
+
+<p class="about-text">
+
+I'm Mohd Jaun Rizvi, a student and web developer
+interested in building websites, apps and digital projects.
+
+I enjoy learning new technologies and turning ideas
+into working projects.
+
+</p>
+
+<div class="facts">
+
+<div class="fact">
+🎓 Class 11 Student
+</div>
+
+<div class="fact">
+💻 Web Development
+</div>
+
+<div class="fact">
+📱 App Development — Learning
+</div>
+
+<div class="fact">
+🎮 Game Development — Learning
+</div>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="section-title">
+
+<div class="small-title">
+My Skills
+</div>
+
+<h2>Tech Stack</h2>
+
+</div>
+
+<div class="skills">
+
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Responsive Design</span>
+<span class="skill">Git</span>
+<span class="skill">GitHub</span>
+<span class="skill">Acode</span>
+<span class="skill">Termux</span>
+<span class="skill">Firebase — Learning</span>
+<span class="skill">React — Learning</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+Simple Pricing
+</div>
+
+<h2>Affordable Websites</h2>
+
+<p>
+Starting prices are shown below. Final pricing can
+depend on the features and requirements.
+</p>
+
+</div>
+
+
+<div class="pricing">
+
+
+<div class="price-card">
+
+<h3>Basic Website</h3>
+
+<div class="amount">
+₹500+
+</div>
+
+<ul>
+<li>1 Page</li>
+<li>Mobile Responsive</li>
+<li>Modern Design</li>
+<li>Contact Section</li>
+<li>Basic Deployment Help</li>
+</ul>
+
+<a href="#contact" class="btn btn-outline">
+Get Started
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<div class="popular">
+POPULAR
+</div>
+
+<h3>Business Website</h3>
+
+<div class="amount">
+₹1,500+
+</div>
+
+<ul>
+<li>3–5 Pages</li>
+<li>Mobile Responsive</li>
+<li>Modern UI</li>
+<li>Contact / WhatsApp</li>
+<li>Social Media Links</li>
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Get Started
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Custom Project</h3>
+
+<div class="amount">
+Let's Talk
+</div>
+
+<ul>
+<li>Custom Features</li>
+<li>Custom Design</li>
+<li>Advanced Functionality</li>
+<li>Project Consultation</li>
+<li>Custom Pricing</li>
+</ul>
+
+<a href="#contact" class="btn btn-outline">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="small-title">
+Get In Touch
+</div>
+
+<h2>
+Let's Build Your Website 🚀
+</h2>
+
+<p>
+Have a website idea or need a website for your business?
+Contact me and let's discuss your project.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<!-- APNA WHATSAPP NUMBER YAHAN ADD KARO -->
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+class="btn btn-primary">
+
+💬 WhatsApp Me
+
+</a>
+
+
+<a
+href="https://www.instagram.com/jaunrizviii/"
+target="_blank"
+class="btn btn-outline">
+
+📸 Instagram @jaunrizviii
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-flex">
+
+<div>
+<span class="footer-name">
+&lt;/&gt; Mohd Jaun Rizvi
+</span>
+</div>
+
+<div>
+Built with ❤️ and code
+</div>
+
+<div>
+© 2026 Mohd Jaun Rizvi
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+class="whatsapp">
+
+💬
+
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+const menu=document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document
+.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
+
+
+const observer=new IntersectionObserver(
+
+entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+
+{
+threshold:.1
+}
+
+);
+
+
+document
+.querySelectorAll(".card,.project,.price-card,.profile-photo")
+.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(25px)";
+el.style.transition="all .6s ease";
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
